@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /*样式1*/
+      @media (max-width: 520px) {
+        .container {
+          width: 92%;
+          margin: 4%;
+          color: red;
+        }
+      }
+
+      /*样式2*/
+      @media (min-width: 521px) and (max-width: 999px) {
+        .container {
+          width: 86%;
+          margin: 7%;
+          color: blueviolet;
+        }
+      }
+
+      /*样式3*/
+      @media (min-width: 1000px) {
+        .container {
+          width: 80%;
+          margin: 10%;
+          color: yellowgreen;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>The picture Element</h2>
+    <!-- @media 注意事项
+        写作顺序问题
+        这简直是个小技巧，一开始我也十分纳闷。为什么写的有些 @media 没有起作用。原来有这么回事：
+
+        我们知道 min-width 表示最小即大于等于， max-width 表示最大即小于等于； 
+        但我们也很清楚 CSS 样式 跟 DOM 结构 跟 JS 一样 从前往后加载，后面重复代码会覆盖之前代码。-->
+        <p class="container">
+            The img element is required as the last child tag of the picture
+            declaration block. The img element is used to provide backward
+            compatibility for browsers that do not support the picture element, or if
+            none of the source tags matched.
+          </p>
+        <p id="demo"></p>
+        <img class="container" src="image/orange.jpg" />
+    <script>
+        var x = "Total Width: " + window.innerWidth;
+        document.getElementById('demo').innerHTML = x;
+    </script>
+  </body>
+</html>

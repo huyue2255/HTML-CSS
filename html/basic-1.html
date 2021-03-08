@@ -1,0 +1,219 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: linen;
+      }
+      h1 {
+        color: maroon;
+        margin-left: 40px;
+      }
+      a:link,
+      a:visited {
+        background-color: #f44336;
+        color: white;
+        padding: 15px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+      }
+      a:hover,
+      a:active {
+        background-color: yellowgreen;
+      }
+    </style>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>yue hu</title>
+  </head>
+  <body>
+    <!--Alternate text is useful when the image cannot be displayed -->
+    <!-- Add a "tooltip" to the paragraph below with the text "About W3Schools". -->
+    <img title="CAT TITLE" src="./image/cat.jpg" alt="Cat Logo" />
+
+    <a style="display: block; width: 100px" href="https://www.w3schools.com"
+      >Learn CSS</a
+    >
+
+    <h1 id="head" style="background-color: powderblue">This is heading 1</h1>
+    <p>This is some text.</p>
+    <hr />
+    <h2>This is heading 2</h2>
+    <p>This is some other text.</p>
+    <hr />
+    <p>This is<br />a paragraph<br />with line breaks.</p>
+
+    <pre style="text-align: center">
+      My Bonnie lies over the ocean.
+    
+      My Bonnie lies over the sea.
+    
+      My Bonnie lies over the ocean.
+    
+      Oh, bring back my Bonnie to me.
+
+      My Bonnie lies over the ocean.
+    
+      My Bonnie lies over the sea.
+    
+      My Bonnie lies over the ocean.
+    
+      Oh, bring back my Bonnie to me.
+
+      My Bonnie lies over the ocean.
+    
+      My Bonnie lies over the sea.
+    
+      My Bonnie lies over the ocean.
+    
+      Oh, bring back my Bonnie to me.
+
+      My Bonnie lies over the ocean.
+    
+      My Bonnie lies over the sea.
+    
+      My Bonnie lies over the ocean.
+    
+      Oh, bring back my Bonnie to me.
+
+      My Bonnie lies over the ocean.
+    
+      My Bonnie lies over the sea.
+    
+      My Bonnie lies over the ocean.
+    
+      Oh, bring back my Bonnie to me.
+
+      My Bonnie lies over the ocean.
+    
+      My Bonnie lies over the sea.
+    
+      My Bonnie lies over the ocean.
+    
+      Oh, bring back my Bonnie to me.
+    </pre>
+
+    <h2>Image as a Link</h2>
+
+    <p>The image below is a link. Try to click on it.</p>
+
+    <p>
+      The width and height attributes always define the width and height of the
+      image in pixels.
+    </p>
+
+    <a href="https://www.w3schools.com" target="_blank"
+      ><img src="./image/smail.jpg" alt="HTML tutorial" width="80" height="80"
+    /></a>
+    <p>A link can also be styled as a button, by using CSS:</p>
+    <a href="mailto:huyue2255@gmail.com">Send email</a>
+    <a href="#head">Jump to Chapter poem</a>
+
+    <h2>Image as a map</h2>
+    <p>
+      Click on the computer, the phone, or the cup of coffee to go to a new page
+      and read more about the topic:
+    </p>
+
+    <img
+      src="./image/workplace.jpg"
+      alt="Workplace"
+      usemap="#workmap"
+      width="400"
+      height="379"
+    />
+
+    <map name="workmap">
+      <area
+        shape="rect"
+        coords="34,44,270,350"
+        alt="Computer"
+        href="sub-html/computer.html"
+      />
+      <area
+        shape="rect"
+        coords="290,172,333,250"
+        alt="Phone"
+        href="sub-html/phone.html"
+      />
+      <area
+        shape="circle"
+        coords="337,300,44"
+        alt="Cup of coffee"
+        href="sub-html/coffee.html"
+      />
+      <area shape="circle" coords="0,0,100" alt="cat" href="cat.html" />
+    </map>
+
+    <h2>Background Cover</h2>
+
+    <!-- TODO: media query back to understand -->
+    <p>
+      Set the background-size property to "cover" and the background image will
+      cover the entire element, in this case the body element.
+    </p>
+    <picture>
+      <source media="(min-width: 650px)" srcset="./image/computer.jpeg" />
+      <source media="(min-width: 1000px)" srcset="image/coffee.jpeg" />
+      <img src="image/cat.jpg" />
+    </picture>
+
+    <h2>HTML Iframes</h2>
+    <p>
+      You can use the height and width attributes to specify the size of the
+      iframe:
+    </p>
+
+    <iframe
+      src="./sub-html/cat.html"
+      height="300"
+      width="300"
+      title="Iframe Example"
+    ></iframe>
+
+    <iframe
+      src="./sub-html/cat.html"
+      name="iframe_a"
+      height="300px"
+      width="100%"
+      title="Iframe Example"
+    ></iframe>
+
+    <p>
+      <a
+        href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fdroplr.com%2Fhow-to%2Fproductivity-tools%2Fhow-to-share-a-link-on-instagram%2F&psig=AOvVaw3LYiFgWZ-Ac7AY-HqavX1z&ust=1614881381852000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMigkYzclO8CFQAAAAAdAAAAABAD"
+        target="iframe_a"
+        >W3Schools.com</a
+      >
+    </p>
+
+    <p>
+      When the target attribute of a link matches the name of an iframe, the
+      link will open in the iframe.
+    </p>
+
+    <h2>My First JavaScript</h2>
+    <p>JavaScript can change the content of an HTML element:</p>
+    <button type="button" onclick="myFunction()">Click Me!</button>
+    <button type="button" onclick="countFunction()">Click Me Count!</button>
+    <button type="button" onclick="resetFunction()">Reset Count!</button>
+    <p id="demo">This is a demonstration.</p>
+    <p id="count">0</p>
+
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+      }
+
+      var counrClicks = 0;
+      function countFunction() {
+        counrClicks++;
+        document.getElementById("count").innerHTML = counrClicks;
+      }
+
+      function resetFunction() {
+        counrClicks = 0;
+        document.getElementById("count").innerHTML = counrClicks;
+      }
+    </script>
+  </body>
+</html>
