@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <style type="text/css">
+      .lh1 {
+        line-height: 1.2;
+        font-size: 50pt;
+        background: red;
+      }
+      .lh2 {
+        line-height: 1.2em;
+        font-size: 50pt;
+        background: green;
+      }
+      .lh3 {
+        line-height: 120%;
+        font-size: 50pt;
+        background: blue;
+      }
+      .lh4 {
+        background: plum;
+        font: 50pt / 1.2 Georgia, "Bitstream Charter", serif;
+      }
+
+      .green {
+        line-height: 1.1;
+        border: solid limegreen;
+      }
+
+      .red {
+        line-height: 1.1em;
+        border: solid red;
+      }
+
+      .yellow {
+        line-height: 110%;
+        border: solid yellow; 
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .box {
+        width: 18em;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>拥有相同行高</h2>
+    <div class="lh1">行高1</div>
+    <div class="lh2">行高2</div>
+    <div class="lh3">行高3</div>
+    <div class="lh4">行高4</div>
+    <h2>区别</h2>
+    <h3>m and %  会去找上一层font-size * 自己的inline-height. 数字则是用的自己的font-size * 自己的inline-height.<h3></h3>
+    <div class="box green">
+        <h1>Avoid unexpected results by using unitless line-height.</h1>
+         length and percentage line-heights have poor inheritance behavior ...
+       </div>
+       
+       <div class="box red">
+        <h1>Avoid unexpected results by using unitless line-height.</h1>
+         length and percentage line-heights have poor inheritance behavior ...
+       </div>
+
+       <div class="box yellow">
+        <h1>Avoid unexpected results by using unitless line-height.</h1>
+         length and percentage line-heights have poor inheritance behavior ...
+       </div>       
+       <!-- The first <h1> line-height is calculated from its own font-size   (30px × 1.1) = 33px  -->
+       <!-- The second <h1> line-height results from the red div's font-size  (15px × 1.1) = 16.5px,  
+           probably not what you want -->
+  </body>
+</html>

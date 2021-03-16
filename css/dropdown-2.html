@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <style>
+            .dropbtn {
+                background-color: violet;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor:pointer;
+            }
+
+            .dropdown {
+                /* 这里是为了让这个element不是static的，
+                这样下面的content会以absolute的形式，相对位置。 */
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: pink;
+                min-width: 100px;   
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {background-color: #f1f1f1}
+
+            /* 下面这样写是不对的因为，现在这样只要鼠标离开button这个下拉菜单就会消失 */
+            /* .dropbtn:hover + .dropdown-content {
+                display: block;
+            } */
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown:hover .dropbtn {
+                background-color: #3e8e41;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h2>Dropdown Menu</h2>
+        <p>Move the mouse over the button to open the dropdown menu.</p>
+        <div class="dropdown" style="float: left;">
+            <button class="dropbtn">Dropdown left</button>
+            <div class="dropdown-content" style="left: 0;">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+
+        <div class="dropdown" style="float: right;">
+            <button class="dropbtn">Dropdown right</button>
+            <div class="dropdown-content" style="right: 0;">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+    </body>
+</html>

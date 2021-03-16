@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <style>
+            /* 同时有这两个class才会显示对应的样式 */
+            .one.two {
+                color:yellowgreen;
+            }
+            /* 逗号分隔：表示当前元素具备其中一个就会出现效果，即并列关系， */
+            .one, .two {
+                color:blueviolet;
+            }
+
+            .one .two {
+                color:pink;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 此处注意，p里面不能包含p元素.实际render出来的 
+            <p class="two">one's child two</p> 是在上面一个p外面的。
+            所以显示的是紫色的字体
+        -->
+        <p class="one two">one two
+            <p class="two">one's child two</p>
+        </p> 
+        <p class="one">
+            aaaaaa
+            <span class="two"> 我是two</span>
+        </p> 
+    </body>
+</html>

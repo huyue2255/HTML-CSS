@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        /* The background-size property also accepts multiple values for background size 
+        (using a comma-separated list), when working with multiple backgrounds.
+        The following example has three background images specified, with different background-size 
+        value for each image: */
+      #example1 {
+        background: url(../html/image/strawberry.jpg) left top no-repeat,
+          url(../html/image/strawberry.jpg) right bottom no-repeat,
+          url(../html/image/smail.jpg) left top repeat;
+        padding: 15px;
+        /* 注意这里的background数字都是分开的，针对以上三个图片的 */
+        background-size: 130px, 130px, auto;
+      }
+
+      .div1 {
+        border: 1px solid black;
+        height: 120px;
+        width: 150px;
+        background: url(../html/image/computer.jpeg);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      .div2 {
+        border: 1px solid black;
+        height: 120px;
+        width: 150px;
+        background: url(../html/image/computer.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .div3 {
+        border: 1px solid black;
+        height: 120px;
+        width: 150px;
+        background: url(../html/image/computer.jpeg);
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The background-size Property</h1>
+
+    <h2>background-size: contain:</h2>
+    <div class="div1">
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <h2>background-size: cover:</h2>
+    <div class="div2">
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <h2>No background-size defined:</h2>
+    <div class="div3">
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <p>Original image:</p>
+    <img
+      src="../html/image/computer.jpeg"
+      alt="Flowers"
+      width="224"
+      height="162"
+    />
+
+    <div id="example1">
+      <h1>Lorem Ipsum Dolor</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+        volutpat.
+      </p>
+      <p>
+        Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+        suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+  </body>
+</html>

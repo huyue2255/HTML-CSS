@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+      }
+      .lh1 {
+        line-height: 2em;
+        font-size: 20px;
+        background: red;
+      }
+      .lh2 {
+        line-height: 2;
+        font-size: 20px;
+        background: green;
+      }
+      .lh3 {
+        line-height: 200%;
+        font-size: 20px;
+        background: blue;
+      }
+    </style>
+  </head>
+    <!--行高1、行高3都是带单位的em和%，他们继承是先计算好高度，再让子元素继承，所以20*2=40
+    行高2没带单位，它会先把行高继承下来，再根据子元素当前字体的大小来计算，所以12*2=24
+    1.font-size虽然lh1 和 lh2的font-size都设置了20px。但是他们下面的P标签所采用的font-size都是12px。
+    通配符*指定的嘛，不指定的话肯定继承了（通配符的优先级高于继承）。
+    2.line-height
+    2.1 三个P标签都没有被指定line-height属性。所以他们会从父元素继承line-height
+    2.2 当line-height的值只有是数字的时候（也就是贴主所说不带单位）会被直接继承，
+    其他的带单位值都是先计算，然后才被继承
+    归结一点：
+    如果行高继承不带单位，那么它会先继承行高，再根据当前子元素的字体大小来计算行高；
+    反之，如果行高继承是带有单位，那么它将先计算行高，接着再让子元素继承。 
+    https://www.cnblogs.com/xuzhudong/p/6526313.html-->
+  <body>
+    <div class="lh1"><p>行高1</p></div>
+    <div class="lh2"><p>行高2</p></div>
+    <div class="lh3"><p>行高3</p></div>
+  </body>
+</html>

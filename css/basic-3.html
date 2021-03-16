@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <style>
+      p.one {
+        border-style: solid;
+        /* all side */
+        border-width: 2px;
+      }
+
+      p.two {
+        border-style: inset;
+        /* top and bottom, right and left */
+        border-width: 2px 5px;
+      }
+
+      p.three {
+        border-style: solid;
+        /* top, right and left, bottom */
+        border-width: 2px 5px 8px;
+      }
+
+      p.four {
+        border-style: ridge;
+        /* top, right, bottom, left */
+        border-width: 2px 5px 8px 10px;
+      }
+
+      div {
+        width: 300px;
+        margin: auto;
+        border: 1px solid yellowgreen;
+      }
+
+      div.test-ex1 {
+        border: 1px solid black;
+        margin-left: 100px;
+      }
+
+      p.ex1 {
+        margin-left: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>The border-width Property</h2>
+    <p>This property specifies the width of the four borders:</p>
+
+    <p class="one">Some text.</p>
+    <p class="two">Some text.</p>
+    <p class="three">Some text.</p>
+    <p class="four">Some text.</p>
+
+    <p>
+      <b>Note:</b> The "border-width" property does not work if it is used
+      alone. Always specify the "border-style" property to set the borders
+      first.
+    </p>
+
+    <h2>Use of margin:auto</h2>
+    <p>
+      You can set the margin property to auto to horizontally center the element
+      within its container. The element will then take up the specified width,
+      and the remaining space will be split equally between the left and right
+      margins:
+    </p>
+
+    <div>
+      This div will be horizontally centered because it has margin: auto;
+    </div>
+
+    <h2>Use of the inherit value</h2>
+    <p>Let the left margin be inherited from the parent element:</p>
+
+    <div class="test-ex1">
+      <p class="ex1">
+        This paragraph has an inherited left margin (from the div element).
+      </p>
+    </div>
+  </body>
+</html>

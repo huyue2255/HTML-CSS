@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <style>
+      .nav {
+        background: #eee;
+        height: 30px;
+        /* line-height: 10%; */
+      }
+
+      /* 用户部分 */
+      .nav .user-info {
+        float: left;
+        margin-right: 5px;
+      }
+      .nav .user.login {
+        display: none;
+      }
+      .nav .user .link {
+        margin-right: 5px;
+      }
+
+      /* 导航链接部分 */
+      .nav .nav-list {
+        float: right;
+        margin: 0;
+      }
+      .nav .nav-list .nav-item {
+        display: inline-block;
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+        <div class="user-info">
+          <span class="user not-login">
+            <span class="link js-login">登录</span>
+            <span class="link js-register">注册</span>
+          </span>
+          <span class="user login">
+            <span class="link-text">欢迎</span>
+            <span class="link">退出</span>
+          </span>
+        </div>
+
+        <!-- 右侧的导航链接 -->
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="link" href="./cart.html">
+              <i class="fa fa-shopping-cart"></i>
+              购物车(<span class="cart-cont">0</span>)
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="link" href="./order-list.html">我的订单</a>
+          </li>
+          <li class="nav-item">
+            <a class="link" href="./user-center.html">我的MMall</a>
+          </li>
+          <li class="nav-item">
+            <a class="link" href="./about.html">关于MMall</a>
+          </li>
+        </ul>
+    </div>
+  </body>
+</html>
