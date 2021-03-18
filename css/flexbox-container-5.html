@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <style>
+      .flex-container {
+        display: flex;
+        height: 600px;
+        flex-wrap: wrap;
+        /* align-content: space-between; */
+        /* align-content: space-around; */
+        /* align-content: stretch; */
+
+        /* The center value displays display the flex lines in the middle of the container: */
+        /* align-content: center; */
+
+        /* The "align-content: flex-start;" displays the flex lines at the start of the container */
+        /* align-content: flex-start; */
+
+        /* The flex-end value displays the flex lines at the end of the container: */
+        align-content: flex-end;
+
+
+        background-color: thistle;
+      }
+
+      .flex-container > div {
+        background-color: turquoise;
+        width: 100px;
+        text-align: center;
+        line-height: 50px;
+        font-size: 20px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The align-content Property</h1>
+    <p>
+      The align-content: space-between: diplays the flex lines with equal space
+      betwen them:
+    </p>
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+  </body>
+</html>

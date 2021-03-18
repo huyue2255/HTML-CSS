@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+这里有一个区别。justify-content 内容会stretch. 如果用align-items 内容就么有stretch。原因是stretch 是align-items: default value. 
+<html>
+  <head>
+    <style>
+      .flex-container {
+        display: flex;
+        height: 200px;
+        /* justify-content: center; */
+        align-items: center;
+        /* align-items: flex-start; */
+        /* align-items: flex-end; */
+        align-items: stretch;
+        /* justify-content: flex-end; */
+        /* justify-content: flex-start; */
+        background-color: DodgerBlue;
+      }
+
+      .flex-container > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <p>
+      A Flexible Layout must have a parent element with the
+      <em>display</em> property set to <em>flex</em>.
+    </p>
+
+    <p>
+      Direct child elements(s) of the flexible container automatically becomes
+      flexible items.
+    </p>
+  </body>
+</html>
